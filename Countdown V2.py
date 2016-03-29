@@ -3,7 +3,7 @@
 # 12/03/2016
 import random
 import time
-f = open('wordlist.txt', 'r')
+f = open('Word Files/wordlist.txt', 'r')
 
 # Dictionaries for vowels and consonants
 # Here, the letters serve as the keys and their corresponding values
@@ -74,6 +74,6 @@ print("Result:", result)
 if __name__ == '__main__':
     import timeit
     numLoops = 5
-    time = timeit.timeit("mainOne(randomAnagram())", setup="from __main__ import solve, randomAnagram", number=numLoops)
+    time = timeit.timeit("solve(randomAnagram())", setup="from __main__ import solve, randomAnagram", number=numLoops)
     print(time)
     print(numLoops, "Loops, Average of",  time/numLoops, "seconds per loop" )
